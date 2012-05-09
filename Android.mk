@@ -6,8 +6,8 @@ LOCAL_CFLAGS:= \
        -O2 -pedantic -Wall -std=c99 -rdynamic -D_XOPEN_SOURCE_EXTENDED -DSYSCONFDIR=\"/system/etc\"
 
 LOCAL_C_INCLUDES:= \
-       external/ncurses/include \
-       external/htop-0.9/plpa-1.3.2/src/libplpa
+       external/libncurses/include \
+       external/htop/plpa-1.3.2/src/libplpa
 
 LOCAL_SRC_FILES:= \
        AvailableMetersPanel.c CategoriesPanel.c CheckItem.c \
@@ -24,7 +24,7 @@ LOCAL_SRC_FILES:= \
        plpa-1.3.2/src/libplpa/plpa_runtime.c \
        plpa-1.3.2/src/libplpa/plpa_map.c
 
-LOCAL_STATIC_LIBRARIES:= libncurses
+LOCAL_SHARED_LIBRARIES:= libncurses
 
 LOCAL_MODULE_TAGS := optional
 
